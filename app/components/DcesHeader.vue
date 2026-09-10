@@ -9,7 +9,7 @@ const items = computed<NavigationMenuItem[]>(() => [
       { label: 'Valorant', to:'/valorant', icon: "i-simple-icons:valorant" },
       { label: 'Counter Strike', to:'/counterstrike', icon: "i-simple-icons:counterstrike"},
       { label: 'Rocket League', to:'/rocketleague', icon: "cbi:rocketleague"},
-      { label: 'GeoGuessr', to:'/geoguessr', icon: "arcticons:geoguessr"}
+      { label: 'GeoGuessr', to:'/geoguessr', icon: "healthicons:geo-location"}
     ]
   },
   {
