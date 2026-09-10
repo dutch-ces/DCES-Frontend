@@ -5,11 +5,11 @@ const items = computed<NavigationMenuItem[]>(() => [
   {
     label: 'Games',
     children: [
-      { label: 'League of Legends', to:'/leagueoflegends' },
-      { label: 'Valorant', to:'/valorant' },
-      { label: 'Counter Strike', to:'/counterstrike'},
-      { label: 'Rocket League', to:'/rocketleague'},
-      { label: 'GeoGuessr', to:'/geoguessr'}
+      { label: 'League of Legends', to:'/leagueoflegends', icon:"i-simple-icons:leagueoflegends"},
+      { label: 'Valorant', to:'/valorant', icon: "i-simple-icons:valorant" },
+      { label: 'Counter Strike', to:'/counterstrike', icon: "i-simple-icons:counterstrike"},
+      { label: 'Rocket League', to:'/rocketleague', icon: "cbi:rocketleague"},
+      { label: 'GeoGuessr', to:'/geoguessr', icon: "arcticons:geoguessr"}
     ]
   },
   {
