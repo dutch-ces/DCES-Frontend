@@ -5,10 +5,11 @@ const items = computed<NavigationMenuItem[]>(() => [
   {
     label: 'Games',
     children: [
-      { label: 'League of Legends' },
-      { label: 'Valorant' },
-      { label: 'Counter Strike' },
-      { label: 'Rocket League' }
+      { label: 'League of Legends', to:'/leagueoflegends' },
+      { label: 'Valorant', to:'/valorant' },
+      { label: 'Counter Strike', to:'/counterstrike'},
+      { label: 'Rocket League', to:'/rocketleague'},
+      { label: 'GeoGuessr', to:'/geoguessr'}
     ]
   },
   {
@@ -60,6 +61,7 @@ const items = computed<NavigationMenuItem[]>(() => [
     />
 
     <template #right>
+
       <UColorModeButton />
     </template>
 
