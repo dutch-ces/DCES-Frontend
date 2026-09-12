@@ -7,7 +7,7 @@ watch(
     updateAppConfig({
       ui: {
         colors: {
-          primary: (color as string) || 'red'
+          primary: (color as string) || 'dcesorange'
         }
       }
     })

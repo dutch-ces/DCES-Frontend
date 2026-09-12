@@ -1,6 +1,6 @@
 <script setup lang="ts">
 definePageMeta({
-    primaryColor: 'red'
+    primaryColor: 'valored'
 })
 </script>
 
