@@ -1,5 +1,5 @@
 <template>
-    <div class="min-h-screen bg-white dark:bg-primary-950">
+    <div class="min-h-screen bg-white dark:bg-neutral-950">
         <DcesHeader />
         <UMain>
             <slot />
