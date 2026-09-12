@@ -80,4 +80,12 @@
     --color-dcesorange-900: #331500;
     --color-dcesorange-950: #240f00;
 
+
+.hero-text {
+    font-family: 'Impact';
+    font-size: var(--text-6xl); /* 3.75rem (60px) */ 
+    line-height: var(--text-6xl--line-height);
+    display:flex;
+    justify-content: center;
+    align-items: center;
 }
