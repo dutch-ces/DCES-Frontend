@@ -43,7 +43,7 @@ const items = computed<NavigationMenuItem[]>(() => [
   <UHeader
     title="DCES"
     :ui="{
-      root: 'bg-primary-50/95 dark:bg-primary-950/95',
+      root: 'bg-white/95 dark:bg-primary-950/95',
       center: 'hidden lg:flex lg:flex-1'
     }"
     class="h-20"
