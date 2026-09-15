@@ -37,7 +37,6 @@ const props = defineProps<{
     grid-template-columns: 1fr 2fr 1fr 1fr 1fr 1fr;
     gap: 1rem;
     align-items: center;
-    /* height: 4rem; */
     height: auto;
     padding: 0 1rem;
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
@@ -45,14 +44,9 @@ const props = defineProps<{
     cursor: pointer;
 }
 
-/* I am beyond confused but I could not get this to work using height 100% and giving the parent a fixed height */
-
 .team > :where(div){
     height: 100%;
 }
-/* .team, .logo-column{
-    height: 60px;
-} */
 
 .team:hover {
     transform: scale(1.02);
@@ -63,7 +57,6 @@ const props = defineProps<{
     display: flex;
     align-items: center;
 }
-
 
 
 .logo-column {
@@ -89,10 +82,7 @@ const props = defineProps<{
 }
 
 .team-logo {
-    /* width: 40px; */
-    /* height: 40px; */
     height: 90%;
-    /* width: 80%; */
     object-fit: contain;
 }
 
@@ -104,7 +94,7 @@ const props = defineProps<{
 
 .points {
     font-weight: bold;
-    color: var(--current-game-color);
+    color: var(--color-primary-500);
 }
 
 .record {
@@ -115,6 +105,7 @@ const props = defineProps<{
 .wins { color: var(--green); }
 .losses { color: var(--red); }
 .ties { color: var(--text-light-gray); }
+
 @container div-standings-container (width < 600px) {
     .team {
         grid-template-columns: 1fr 2.5fr 0.5fr 0.5fr 0.5fr 0.5fr;
@@ -128,15 +119,9 @@ const props = defineProps<{
     .name-column{
         margin: 8px 0;
     }
-    .division-title {
-        height: 3rem;
-    }
 
     .team-name {
         font-size: 0.9rem;
-    }
-    .teams-grid, .division-header{
-        font-size: large;
     }
 }
 </style>
