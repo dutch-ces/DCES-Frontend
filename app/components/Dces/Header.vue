@@ -49,7 +49,7 @@ const items = computed<NavigationMenuItem[]>(() => [
     class="h-20"
   >
     <template #title>
-      <CompetitionLogo class="h-17 w-auto text-primary-500" />
+      <DcesLogo class="h-17 w-auto text-primary-500" />
       <h1 class="h-12 w-auto">DCES</h1>
     </template>
 
