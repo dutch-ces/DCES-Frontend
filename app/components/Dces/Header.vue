@@ -1,6 +1,9 @@
 <script setup lang="ts">
 import type { NavigationMenuItem } from '@nuxt/ui'
 
+
+
+
 const items = computed<NavigationMenuItem[]>(() => [
   {
     label: 'Games',
@@ -29,10 +32,10 @@ const items = computed<NavigationMenuItem[]>(() => [
     ]
   },
   {
-    label: 'organisation',
+    label: 'About',
     children: [
-      {label: 'Board'},
       {label: 'Associations'},
+      {label: 'Board'},
       {label: 'Contact'}
     ]
   }

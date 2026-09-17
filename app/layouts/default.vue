@@ -1,6 +1,6 @@
 <template>
     <div class="min-h-screen bg-white dark:bg-neutral-950">
-        <DcesHeader />
+        <DcesNewHeader />
         <UMain>
             <slot />
         </UMain>

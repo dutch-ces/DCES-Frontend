@@ -1,13 +1,13 @@
 <script setup lang="ts">
-const route = useRoute()
+const {currentGameData} = useCurrentGame()
 
 watch(
-  () => route.meta.primaryColor,
+  () => currentGameData.value?.color,
   (color) => {
     updateAppConfig({
       ui: {
         colors: {
-          primary: (color as string) || 'dcesorange'
+          primary: color || 'dcesorange'
         }
       }
     })
