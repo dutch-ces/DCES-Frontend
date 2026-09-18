@@ -1,0 +1,167 @@
+{
+    "boardMembers": [
+        {
+            "order": 3,
+            "active": true,
+            "founder": true,
+            "role": "Board Member",
+            "first_name": "Jelle",
+            "gamertag": "TheJellyMan",
+            "last_name": "van Wezep",
+            "discord": "TheJellyMan.",
+            "description": "As former board member of Blueshell and the Esports Lounge, Jelle has been involved with the DCES, and its predecessor Academy League, since the very first beginnings. As a casual player who likes competition, it was important for him to create the opportunity for everyone to participate and have a fun time. Jelle mostly focuses on exposing the competition to more people and sponsors, while helping out with the adminning and social media sides.",
+            "social_links": {
+                "linkedin": "https://www.linkedin.com/in/jelle-van-wezep-b5724b250/"
+            }
+        },
+        {
+            "order": 1,
+            "active": true,
+            "founder": true,
+            "role": "Board Member",
+            "first_name": "Youri",
+            "gamertag": "YouriYolo",
+            "last_name": "de Raadt",
+            "discord": "YouriYolo",
+            "description": "As one of the original founders of the DCCL in 2020, Youri has been a part of the DCES since the very start. Originally a Counter-Strike player and having participated in the first few seasons, Youri has since focused more and more on organising the competition, leading to the merger forming the DCES. Youri mostly focuses on broadcasting, adminning, and creating all the tools needed to make the DCES run smoothly.",
+            "social_links": {
+                "linkedin": "https://www.linkedin.com/in/youri-de-raadt-61258326b/"
+            }
+        },
+        {
+            "order": 5,
+            "active": true,
+            "founder": false,
+            "role": "Board Member",
+            "first_name": "Rosalin",
+            "gamertag": "Lyncxe",
+            "last_name": "de Vos",
+            "discord": "Lyncxe",
+            "description": "One of the later additions of the DCES board with a focus on communication with associations and other organisations. Helps with adminning in all games and does observing during streams. Other than that she also helps with any other general tasks.",
+            "social_links": {
+                "linkedin": "https://www.linkedin.com/in/rosalin-de-vos-2b0657211"
+            }
+        },
+        {
+            "order": 4,
+            "active": true,
+            "founder": true,
+            "role": "Board Member",
+            "first_name": "Twan",
+            "gamertag": "MR_",
+            "last_name": "Kok",
+            "discord": "MR_",
+            "description": "",
+            "social_links": {}
+        },
+        {
+            "order": 2,
+            "active": true,
+            "founder": false,
+            "role": "Board Member",
+            "first_name": "Siebe",
+            "gamertag": "Dutchyyyyyyyy",
+            "last_name": "de Bruijn",
+            "discord": ".siebe",
+            "description": "The most recent addition to the DCES board, his main focus is on getting the website up and running. Additionally, a fanatic participant in the DCLS, and in his own time a big lover of karting.",
+            "social_links": {
+                "linkedin": "https://www.linkedin.com/in/siebe-de-bruijn-soft-dev",
+                "linktree": "https://linktr.ee/siebedebruijn"
+            }
+        },
+        {
+            "order": 50,
+            "active": false,
+            "founder": true,
+            "role": "Board Member",
+            "first_name": "Maurits",
+            "gamertag": "Lotus",
+            "last_name": "van 't Hag",
+            "discord": "the_hag",
+            "description": "As one of the original founders of the Academy League, the precursor competition for League of Legends, Valorant and Rocket League, Maurits has been a key part of the DCES since its creation. While he started out helping with adminning, he has since shifted his focus to building the competitions divisions, managing the database, and developing the DCES website, which he continues to maintain and expand with new features.",
+            "social_links": {
+                "linkedin": "https://www.linkedin.com/in/maurits-van-t-hag-39a11525b/",
+                "github": "https://github.com/LotusHag"
+            }
+        },
+        {
+            "order": 20,
+            "active": false,
+            "founder": false,
+            "role": "Predecessor",
+            "first_name": "Milan Tomas",
+            "gamertag": "Thiordain",
+            "last_name": "Ritsema van Eck",
+            "discord": "Thiordain",
+            "description": "Helped in creating the Academy League, which was the Predecessor for League of Legends, Valorant and Rocket League in the DCES.",
+            "social_links": {
+                "linkedin": "https://www.linkedin.com/in/tomas-ritsema-van-eck-645087213/"
+            }
+        },
+        {
+            "order": 21,
+            "active": false,
+            "founder": false,
+            "role": "Predecessor",
+            "first_name": "Jari",
+            "gamertag": "BadrJari",
+            "last_name": "Immerzeel",
+            "discord": "deechteBadrJari",
+            "description": "Helped in creating the Academy League, which was the Predecessor for League of Legends, Valorant and Rocket League in the DCES.",
+            "social_links": {
+                "linkedin": "https://www.linkedin.com/in/jari-immerzeel-aa9369172/"
+            }
+        },
+        {
+            "order": 10,
+            "active": false,
+            "founder": false,
+            "role": "Board Member",
+            "first_name": "Nienke",
+            "gamertag": "Nienix",
+            "last_name": "van Weele",
+            "discord": "Nienix",
+            "description": "Joined the board from end of 2022 until the end of the first quarter of 2023 and functioned mainly as communication point between the organisations, players, sponsors and any other party who wished to interact or otherwise communicate with the DCES.",
+            "social_links": {
+                "linkedin": "https://www.linkedin.com/in/nienke-van-weele-901312245/"
+            }
+        },
+        {
+            "order": 11,
+            "active": false,
+            "founder": false,
+            "role": "Predecessor",
+            "first_name": "Shuhei",
+            "gamertag": "Pingu",
+            "last_name": "Hagiwara",
+            "discord": "Pppingu",
+            "description": "One of the original founders of the DCCL in 2020 and board member until the merge of the DCCS and academy League into the DCES",
+            "social_links": {}
+        },
+        {
+            "order": 12,
+            "active": false,
+            "founder": false,
+            "role": "Predecessor",
+            "first_name": "Teun",
+            "gamertag": "Hyzaq",
+            "last_name": "Kok",
+            "discord": "Hyzaq",
+            "description": "One of the original founders of the DCCL in 2020 and board member until the middle of 2022.",
+            "social_links": {}
+        },
+        {
+            "order": 13,
+            "active": false,
+            "founder": false,
+            "role": "Board Member",
+            "first_name": "Jeroen",
+            "gamertag": "Wallnut",
+            "last_name": "Kok",
+            "discord": "Wallnutty",
+            "description": "Former board member of the DCCS for several years and long time player for DSEA. While he has stepped down from the board, he still helps out as an admin in the DCCS whenever he is needed.",
+            "social_links": {}
+        }
+    ]
+}
+
