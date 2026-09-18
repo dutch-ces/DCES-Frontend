@@ -14,7 +14,7 @@ const props = defineProps<{
         {{ data.split }} | Division {{ data.division }} {{ props.testname }}
       </div>
     </NuxtLink>
-    <div class="division-header bg-neutral-100 dark:bg-neutral-900">
+    <div class="division-header bg-neutral-100 dark:bg-neutral-900 text-neutral-800 dark:text-neutral-200">
         <div>Team Name</div>
         <div>Pts</div>
         <div>W</div>
@@ -91,7 +91,6 @@ const props = defineProps<{
     align-items: center;
     justify-content: center;
     font-weight: bold;
-    color: var(--white);
 }
 
 .teams-grid {

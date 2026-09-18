@@ -21,7 +21,7 @@ const props = defineProps<{
     <div class="team-column record-column">
         <span class="wins">{{ standingsTeam.wins }}</span>
     </div>
-    <div class="team-column record-column">
+    <div class="team-column record-column text-neutral-800 dark:text-neutral-200">
         <span class="ties">{{ standingsTeam.ties }}</span>
     </div>
     <div class="team-column record-column">
@@ -74,7 +74,6 @@ const props = defineProps<{
 
 .division-standings .team-name {
     text-decoration: none;
-    color: var(--white);
     font-weight: 500;
     font-size: 1.1rem;
     min-height: auto;
@@ -104,7 +103,6 @@ const props = defineProps<{
 
 .wins { color: var(--green); }
 .losses { color: var(--red); }
-.ties { color: var(--text-light-gray); }
 
 @container div-standings-container (width < 600px) {
     .team {
