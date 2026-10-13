@@ -8,6 +8,7 @@ const props = defineProps<{
 </script>
 
 <template>
+<<<<<<< HEAD
     <div class="division-standings">
         <NuxtLink :to="'/team/' + data.division">
             <div class="division-title">
@@ -24,6 +25,20 @@ const props = defineProps<{
         <div class="teams-grid bg-neutral-100 dark:bg-neutral-900">
             <StandingsRow v-for="team in data.teamarray" :key="team.points" :standingsTeam="team" />
         </div>
+=======
+  <div class="division-standings">
+    <NuxtLink :to="'/team/' + data.division">
+      <div class="division-title">
+        {{ data.split }} | Division {{ data.division }} {{ props.testname }}
+      </div>
+    </NuxtLink>
+    <div class="division-header bg-neutral-100 dark:bg-neutral-900 text-neutral-800 dark:text-neutral-200">
+        <div>Team Name</div>
+        <div>Pts</div>
+        <div>W</div>
+        <div>T</div>
+        <div>L</div>
+>>>>>>> 34921686ae69af300af25500defed26721549f6c
     </div>
 </template>
 
