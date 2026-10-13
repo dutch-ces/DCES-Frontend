@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import type { standingsTeam } from '~/types/standingsType'
-import {createFakeStandings} from '~/types/standingsType'
+import { createFakeStandings } from '~/types/standingsType'
 const data = createFakeStandings(8)
 const props = defineProps<{
     testname: string
@@ -8,28 +8,26 @@ const props = defineProps<{
 </script>
 
 <template>
-  <div class="division-standings">
-    <NuxtLink :to="'/team/' + data.division">
-      <div class="division-title">
-        {{ data.split }} | Division {{ data.division }} {{ props.testname }}
-      </div>
-    </NuxtLink>
-    <div class="division-header bg-neutral-100 dark:bg-neutral-900">
-        <div>Team Name</div>
-        <div>Pts</div>
-        <div>W</div>
-        <div>T</div>
-        <div>L</div>
+    <div class="division-standings">
+        <NuxtLink :to="'/team/' + data.division">
+            <div class="division-title">
+                {{ data.split }} | Division {{ data.division }} {{ props.testname }}
+            </div>
+        </NuxtLink>
+        <div class="division-header bg-neutral-100 dark:bg-neutral-900">
+            <div>Team Name</div>
+            <div>Pts</div>
+            <div>W</div>
+            <div>T</div>
+            <div>L</div>
+        </div>
+        <div class="teams-grid bg-neutral-100 dark:bg-neutral-900">
+            <StandingsRow v-for="team in data.teamarray" :key="team.points" :standingsTeam="team" />
+        </div>
     </div>
-    <div class="teams-grid bg-neutral-100 dark:bg-neutral-900">
-      <StandingsRow v-for="team in data.teamarray" :key="team.points"  :standingsTeam = "team"/>
-    </div>
-  </div>
 </template>
 
 <style scoped>
-
-
 .division-standings {
     background: rgba(255, 255, 255, 0.03);
     border-radius: 15px;
@@ -63,12 +61,10 @@ const props = defineProps<{
     left: -100%;
     width: 100%;
     height: 100%;
-    background: linear-gradient(
-        120deg,
-        transparent,
-        rgba(255, 255, 255, 0.3),
-        transparent
-    );
+    background: linear-gradient(120deg,
+            transparent,
+            rgba(255, 255, 255, 0.3),
+            transparent);
     transition: left 0.5s ease;
 }
 
@@ -77,7 +73,7 @@ const props = defineProps<{
 }
 
 
-.division-header{
+.division-header {
     display: grid;
     grid-template-columns: 3fr 1fr 1fr 1fr 1fr;
     padding: 10px 2rem 10px 3rem;
@@ -86,16 +82,16 @@ const props = defineProps<{
     font-size: x-large;
 
 }
+
 .division-header>div {
     display: flex;
     align-items: center;
     justify-content: center;
     font-weight: bold;
-    color: var(--white);
 }
 
 .teams-grid {
-    
+
     padding: 0 1rem 1rem 1rem;
     font-size: x-large;
 }
@@ -106,13 +102,16 @@ const props = defineProps<{
 
 
 
-@media (max-width:768px){
-    .teams-grid, .division-header{
+@media (max-width:768px) {
+
+    .teams-grid,
+    .division-header {
         font-size: large;
     }
 }
+
 @container div-standings-container (width < 600px) {
-    .division-header{
+    .division-header {
         grid-template-columns: 3.5fr 0.5fr 0.5fr 0.5fr 0.5fr;
         gap: 0.5rem;
         padding: 0 1rem;
@@ -122,9 +121,9 @@ const props = defineProps<{
         height: 3rem;
     }
 
-    .teams-grid, .division-header{
+    .teams-grid,
+    .division-header {
         font-size: large;
     }
 }
-
 </style>
