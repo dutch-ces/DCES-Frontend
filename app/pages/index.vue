@@ -70,7 +70,7 @@ const discordUrl = 'https://discord.gg/7wfXF7AU3R'
                             class="mt-2 text-3xl font-bold text-neutral-950 dark:text-white sm:text-4xl">Five games.
                             Your next match.</h2>
                     </div>
-                    <p class="max-w-md text-base leading-7 text-neutral-600 dark:text-neutral-300">
+                    <p class="text-base leading-7 text-neutral-600 dark:text-neutral-300">
                         Explore a competition built around the games you already love.
                     </p>
                 </div>
