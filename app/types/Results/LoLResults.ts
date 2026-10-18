@@ -1,27 +1,16 @@
 import { z } from "zod"
 import { faker } from "@faker-js/faker"
-import { TeamSchema, createFakeTeam } from "./Teams/Team"
-import type { Team } from "./Teams/Team"
-import { lolChampionSchema, createFakeLolChampion} from "./Champions/Champions"
-import type { lolChampion } from "./Champions/Champions"
-
-export const seriesResultSchema = z.object({
-    team1: TeamSchema,
-    team2: TeamSchema,
-    time: z.iso.datetime(),
-    team1_score: z.number(),
-    team2_score: z.number(),
-    forfeit: z.boolean(),
-    stage: z.enum(["Groupstage", "Playoffs"]),
-    round: z.number(),
-    best_of: z.number(),
-});
+import { TeamSchema, createFakeTeam } from "../Teams/Team"
+import type { Team } from "../Teams/Team"
+import { lolChampionSchema, createFakeLolChampion} from "../Characters/Champions"
+import type { lolChampion } from "../Characters/Champions"
+import {seriesResultSchema} from "./results"
 
 export const lolSeriesMatchResultSchema = z.object({
     blue_team: TeamSchema.optional(),
     red_team: TeamSchema.optional(),
-    blue_team_champs: z.array(lolChampionSchema).optional(),
-    red_team_champs: z.array(lolChampionSchema).optional(),
+    blue_team_champs: z.array(lolChampionSchema).length(5).optional(),
+    red_team_champs: z.array(lolChampionSchema).length(5).optional(),
     forfeit: z.boolean(),
 });
 
@@ -29,17 +18,8 @@ export const lolSeriesResultSchema = seriesResultSchema.safeExtend({
     matches: z.array(lolSeriesMatchResultSchema),
 });
 
-// export const csSeriesResultSchema = seriesResultSchema.safeExtend({
-//     matches: z.array(csMatchSchema), 
-// });
-
-// export const valoSeriesResultsSchema = seriesResultSchema.safeExtend({
-//     matches: z.array(valoMatchSchema),
-// });
-
 export type lolSeriesResult = z.infer<typeof lolSeriesResultSchema>
 export type lolSeriesMatchResult = z.infer<typeof lolSeriesMatchResultSchema>
-
 
 export function createFakeLolMatch(teams: [Team, Team] = [createFakeTeam(), createFakeTeam()], overrides = {}): lolSeriesMatchResult {
     let blue_team_champs: lolChampion[] = []
