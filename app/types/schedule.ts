@@ -1,9 +1,7 @@
 import { z } from "zod"
 import { faker } from "@faker-js/faker"
 import { TeamSchema, createFakeTeam } from "./Teams/Team"
-import type { Team } from "./Teams/Team"
 import { lolChampionSchema, createFakeLolChampion} from "./Champions/Champions"
-import type { lolChampion } from "./Champions/Champions"
 
 export const seriesScheduleSchema = z.object({
     team1: TeamSchema,
