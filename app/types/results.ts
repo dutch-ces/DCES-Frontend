@@ -12,6 +12,9 @@ export const seriesResultSchema = z.object({
     team1_score: z.number(),
     team2_score: z.number(),
     forfeit: z.boolean(),
+    stage: z.enum(["Groupstage", "Playoffs"]),
+    round: z.number(),
+    best_of: z.number(),
 });
 
 export const lolSeriesMatchResultSchema = z.object({
@@ -60,10 +63,13 @@ export function createFakeLolSeries(overrides = {}): lolSeriesResult {
     return {
         team1: team1,
         team2: team2,
+        best_of: faker.number.int(),
         time: faker.date.recent().toISOString(),
         team1_score: faker.number.int(),
         team2_score: faker.number.int(),
         forfeit: faker.datatype.boolean(),
+        stage: faker.helpers.arrayElement(["Groupstage", "Playoffs"] as const),
+        round: faker.number.int(),
         matches: [createFakeLolMatch([team1, team2]), createFakeLolMatch([team1, team2]), createFakeLolMatch([team1, team2])],
     }
 }
