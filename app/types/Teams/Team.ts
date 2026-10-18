@@ -14,10 +14,35 @@ export const TeamSchema = z.object({
 
 export type Team = z.infer<typeof TeamSchema>
 
+const adjectives = [
+    "Shadow", "Rapid", "Crimson", "Frozen", "Savage",
+    "Silent", "Royal", "Neon", "Astral", "Iron",
+    "Golden", "Storm", "Phantom", "Quantum", "Wild",
+];
+
+const nouns = [
+    "Wolves", "Titans", "Phoenix", "Dragons", "Ravens",
+    "Vipers", "Knights", "Falcons", "Reapers", "Giants",
+    "Legends", "Warriors", "Eclipse", "Hawks", "Rangers",
+];
+
+export function createFakeTeamName(): string {
+    const formats = [
+        () => `${faker.helpers.arrayElement(adjectives)} ${faker.helpers.arrayElement(nouns)}`,
+        () => `${faker.helpers.arrayElement(adjectives)} ${faker.helpers.arrayElement(nouns)} Esports`,
+        () => `Team ${faker.helpers.arrayElement(nouns)}`,
+    ];
+
+    return faker.helpers
+        .arrayElement(formats)()
+        .slice(0, 35)
+        .trim();
+}
+
 export function createFakeTeam(): Team {
     return {
         Id: faker.string.uuid(),
-        Name: faker.string.alpha({ length: { min: 1, max: 35 } }),
+        Name: createFakeTeamName(),
         Association: createFakeAssociation(),
         Split: "S" + faker.number.int({ min: 1, max: 99 }) + "S" + faker.number.int({ min: 1, max: 2 }),
         Division: createFakeDivision()
