@@ -2,7 +2,7 @@ import { z } from "zod"
 import { faker } from "@faker-js/faker"
 
 export const AssociationSchema = z.object({
-    Id: z.string(),
+    Id: z.uuid(),
     Name: z.string().max(35)
 })
 
