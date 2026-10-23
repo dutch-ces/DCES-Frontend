@@ -55,9 +55,10 @@ const options = computed<NavigationMenuItem[]>(() => [
     </template>
 
   </UHeader>
-  <UNavigationMenu v-if="currentGame" :items="options" color="secondary" :ui="{
-    linkLabel: '!text-black',
-    childLinkLabel: 'whitespace-normal overflow-visible text-clip !text-black'
-  }" class="w-full justify-center bg-primary-500" />
+
+  <UNavigationMenu v-if="currentGame" :items="options" :ui="{
+    link: 'aria:before:bg-primary',
+    linkLabel: 'text-black dark:text-white',
+  }" class="w-full justify-center bg-primary-500" color="primary" />
   <USeparator />
 </template>

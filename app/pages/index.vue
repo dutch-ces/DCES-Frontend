@@ -80,7 +80,8 @@ const discordUrl = 'https://discord.gg/7wfXF7AU3R'
                         :style="{ '--game-color': `var(--color-${game.color}-500, var(--${game.color}))` }">
                         <UCard class="h-full transition-colors group-hover:ring-2 group-hover:ring-[var(--game-color)]"
                             :ui="{ body: 'flex min-h-40 flex-col items-center justify-center gap-4' }">
-                            <UIcon :name="game.icon" class="size-12 text-[color:var(--game-color)]" />
+                            <UIcon :name="game.icon"
+                                class="size-12 text-[color:var(--game-color)] drop-shadow-[0_0_3px_var(--color-neutral-500)]" />
                             <span class="text-center font-semibold">{{ game.name }}</span>
                         </UCard>
                     </NuxtLink>
