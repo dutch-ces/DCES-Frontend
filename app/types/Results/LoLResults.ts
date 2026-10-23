@@ -4,7 +4,7 @@ import { TeamSchema, createFakeTeam } from "../Teams/Team"
 import type { Team } from "../Teams/Team"
 import { lolChampionSchema, createFakeLolChampion} from "../Characters/Champions"
 import type { lolChampion } from "../Characters/Champions"
-import {seriesResultSchema} from "./results"
+import {seriesResultSchema} from "./Results"
 
 export const lolSeriesMatchResultSchema = z.object({
     blue_team: TeamSchema.optional(),
