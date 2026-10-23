@@ -9,18 +9,7 @@ const { currentGameData } = useCurrentGame()
 
 <template>
   <main>
-    <section>
-      <UContainer class="py-14 md:py-20">
-        <div class="flex items-center gap-3 text-sm font-semibold uppercase tracking-[0.12em] text-primary">
-          <UIcon :name="currentGameData?.icon ?? 'i-lucide-gamepad-2'" class="size-5" />
-          {{ currentGameData?.name ?? 'Competition' }}
-        </div>
-        <h1 class="mt-5 text-4xl font-bold sm:text-6xl">Match schedule</h1>
-        <p class="mt-4 max-w-2xl text-base leading-7 text-neutral-700 dark:text-neutral-300">
-          Browse the upcoming series and find out who plays next.
-        </p>
-      </UContainer>
-    </section>
+    <GamePageHero title="Match schedule" description="Browse the upcoming series and find out who plays next." />
 
     <section class="py-10 md:py-14" aria-labelledby="schedule-heading">
       <UContainer>

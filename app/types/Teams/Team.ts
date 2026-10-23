@@ -11,8 +11,10 @@ export const TeamSchema = z.object({
     Division: DivisionSchema
 })
 
+export const TeamsSchema = z.array(TeamSchema)
 
 export type Team = z.infer<typeof TeamSchema>
+export type Teams = z.infer<typeof TeamsSchema>
 
 const adjectives = [
     "Shadow", "Rapid", "Crimson", "Frozen", "Savage",
@@ -44,7 +46,11 @@ export function createFakeTeam(): Team {
         Id: faker.string.uuid(),
         Name: createFakeTeamName(),
         Association: createFakeAssociation(),
-        Split: "S" + faker.number.int({ min: 1, max: 99 }) + "S" + faker.number.int({ min: 1, max: 2 }),
+        Split: "S" + faker.number.int({ min: 1, max: 5 }) + "S" + faker.number.int({ min: 1, max: 2 }),
         Division: createFakeDivision()
     }
+}
+
+export function createFakeTeams(amount: number): Teams {
+    return Array.from({ length: amount }, () => createFakeTeam())
 }

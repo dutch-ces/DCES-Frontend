@@ -10,10 +10,12 @@ export const DivisionSchema = z.object({
 
 export type Division = z.infer<typeof DivisionSchema>
 
+
+
 export function createFakeDivision(): Division {
     return {
         Id: faker.string.uuid(),
-        Name: faker.number.int() + faker.string.alpha(),
+        Name: faker.number.int({ min: 1, max: 6 }) + faker.helpers.arrayElement(['a', 'b', 'c']),
         Split: faker.string.alpha()
     }
 }
