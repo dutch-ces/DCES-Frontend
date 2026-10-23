@@ -4,7 +4,7 @@ import { TeamSchema, createFakeTeam } from "../Teams/Team"
 import type { Team } from "../Teams/Team"
 import { gameMapSchema } from "../Characters/Maps"
 import {createFakeGameMap} from "../Characters/Maps"
-import {seriesResultSchema} from "./results"
+import {seriesResultSchema} from "./Results"
 
 export const csSeriesMatchResultSchema = z.object({
     team1: TeamSchema.optional(),
@@ -18,6 +18,7 @@ export const csSeriesMatchResultSchema = z.object({
 export const csSeriesResultSchema = seriesResultSchema.safeExtend({
     matches: z.array(csSeriesMatchResultSchema),
 });
+
 
 export type csSeriesResult = z.infer<typeof csSeriesResultSchema>
 export type csSeriesMatchResult = z.infer<typeof csSeriesMatchResultSchema>

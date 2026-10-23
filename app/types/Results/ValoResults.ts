@@ -5,7 +5,7 @@ import type { Team } from "../Teams/Team"
 import { valoAgentSchema, createFakeValoAgent } from "../Characters/Agents"
 import type { valoAgent } from "../Characters/Agents"
 import { gameMapSchema, createFakeGameMap } from "../Characters/Maps"
-import {seriesResultSchema} from "./results"
+import {seriesResultSchema} from "./Results"
 
 export const valoSeriesMatchResultSchema = z.object({
     team1: TeamSchema.optional(),
