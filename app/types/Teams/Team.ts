@@ -6,6 +6,7 @@ import { createFakeDivision, DivisionSchema } from "../Division/Division"
 export const TeamSchema = z.object({
     Id: z.uuid(),
     Name: z.string().max(35),
+    Image: z.url(),
     Association: AssociationSchema.optional(),
     Split: z.string().max(5),
     Division: DivisionSchema
@@ -45,6 +46,7 @@ export function createFakeTeam(): Team {
     return {
         Id: faker.string.uuid(),
         Name: createFakeTeamName(),
+        Image: faker.image.url(),
         Association: createFakeAssociation(),
         Split: "S" + faker.number.int({ min: 1, max: 5 }) + "S" + faker.number.int({ min: 1, max: 2 }),
         Division: createFakeDivision()
