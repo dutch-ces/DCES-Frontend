@@ -1,13 +1,8 @@
 import { z } from "zod"
 import { faker } from "@faker-js/faker"
-import { TeamSchema, createFakeTeam } from "../Teams/Team"
-import type { Team } from "../Teams/Team"
-import { lolChampionSchema, createFakeLolChampion} from "../Characters/Champions"
-import type { lolChampion } from "../Characters/Champions"
-import { lolItemSchema, createFakeLolItem} from "../Characters/Items"
-import type { lolItem } from "../Characters/Items"
-
-
+import { TeamSchema, createFakeTeam, type Team } from "../Teams/Team"
+import { lolChampionSchema, createFakeLolChampion, type lolChampion } from "../Characters/Champions"
+import { lolItemSchema, createFakeLolItem, type lolItem } from "../Characters/Items"
 
 export const lolDetailedMatchPlayerSchema = z.object({
     puuid: z.string(),

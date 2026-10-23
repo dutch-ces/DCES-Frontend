@@ -1,10 +1,8 @@
 import { z } from "zod"
 import { faker } from "@faker-js/faker"
-import { TeamSchema, createFakeTeam } from "../Teams/Team"
-import type { Team } from "../Teams/Team"
-import { lolChampionSchema, createFakeLolChampion} from "../Characters/Champions"
-import type { lolChampion } from "../Characters/Champions"
-import {seriesResultSchema} from "./Results"
+import { TeamSchema, createFakeTeam, type Team } from "../Teams/Team"
+import { lolChampionSchema, createFakeLolChampion, type lolChampion } from "../Characters/Champions"
+import { seriesResultSchema } from "./Results"
 
 export const lolSeriesMatchResultSchema = z.object({
     blue_team: TeamSchema.optional(),
