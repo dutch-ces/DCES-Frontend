@@ -2,7 +2,7 @@
 import { createFakeSchedule, ScheduleSchema } from '~/types/schedule';
 const request = createFakeSchedule()
 const schedule = ScheduleSchema.parse(request).sort(
-  (a, b) => new Date(a.time).getTime() - new Date(b.time).getTime()
+  (a, b) => new Date(a.Time).getTime() - new Date(b.Time).getTime()
 )
 const { currentGameData } = useCurrentGame()
 </script>
@@ -24,7 +24,7 @@ const { currentGameData } = useCurrentGame()
         </div>
 
         <div v-if="schedule.length" class="divide-y divide-neutral-200 dark:divide-neutral-800">
-          <ScheduleSerie v-for="(serie, index) in schedule" :key="`${serie.team1.Id}-${serie.team2.Id}-${index}`"
+          <ScheduleSerie v-for="(serie, index) in schedule" :key="`${serie.Team1.Id}-${serie.Team2.Id}-${index}`"
             :serie="serie" />
         </div>
         <p v-else class="py-16 text-center text-neutral-600 dark:text-neutral-300">

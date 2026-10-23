@@ -11,12 +11,20 @@ export const PlayerSchema = z.object({
 
 export const PlayerBrowseSchema = PlayerSchema.safeExtend({
     LastTeam: TeamSchema,
-    nationality1: z.string().max(2),
-    nationality2: z.string().max(2)
+    Nationality1: z.string().max(2),
+    Nationality2: z.string().max(2)
 })
 
+export type Player = z.infer<typeof PlayerSchema>
 export type PlayerBrowse = z.infer<typeof PlayerBrowseSchema>
 
+export function createFakePlayer(): Player {
+    return {
+        Id: faker.string.uuid(),
+        Name: faker.animal.petName(),
+        Association: faker.helpers.maybe(() => createFakeAssociation())
+    }
+}
 
 export function createFakePlayerBrowse(): PlayerBrowse {
     return {
@@ -24,7 +32,7 @@ export function createFakePlayerBrowse(): PlayerBrowse {
         Name: faker.lorem.words(1),
         Association: createFakeAssociation(),
         LastTeam: createFakeTeam(),
-        nationality1: faker.location.countryCode(),
-        nationality2: faker.location.countryCode()
+        Nationality1: faker.location.countryCode(),
+        Nationality2: faker.location.countryCode()
     }
 }

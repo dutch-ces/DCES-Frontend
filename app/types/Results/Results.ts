@@ -1,14 +1,14 @@
 import { z } from "zod"
-import { TeamSchema} from "../Teams/Team"
+import { TeamSchema } from "../Teams/Team"
 
 export const seriesResultSchema = z.object({
-    team1: TeamSchema,
-    team2: TeamSchema,
-    time: z.iso.datetime(),
-    team1_score: z.number(),
-    team2_score: z.number(),
-    forfeit: z.boolean(),
-    stage: z.enum(["Groupstage", "Playoffs"]),
-    round: z.number(),
-    best_of: z.number(),
+    Team1: TeamSchema,
+    Team2: TeamSchema,
+    Time: z.iso.datetime(),
+    Team1Score: z.number(),
+    Team2Score: z.number(),
+    Forfeit: z.boolean(),
+    Stage: z.enum(["Groupstage", "Playoffs"]),
+    Round: z.number(),
+    BestOf: z.number(),
 });

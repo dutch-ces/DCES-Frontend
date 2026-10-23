@@ -1,21 +1,22 @@
 import { z } from "zod"
 
 export const DCESTeamMemberSchema = z.object({
-    order: z.number(),
-    active: z.boolean(),
-    founder: z.boolean(),
-    role: z.string(),
-    first_name: z.string(),
-    gamertag: z.string(),
-    last_name: z.string(),
-    discord: z.string(),
-    description: z.string(),
-    social_links: z.object({
-        linkedin: z.string(),
-        github: z.string(),
-        twitter: z.string(),
-        youtube: z.string(),
-        twitch: z.string(),
+    Order: z.number(),
+    Active: z.boolean(),
+    Founder: z.boolean(),
+    Role: z.string(),
+    FirstName: z.string(),
+    Gamertag: z.string(),
+    LastName: z.string(),
+    Discord: z.string(),
+    Description: z.string(),
+    SocialLinks: z.object({
+        LinkedIn: z.string().optional(),
+        GitHub: z.string().optional(),
+        Twitter: z.string().optional(),
+        YouTube: z.string().optional(),
+        Twitch: z.string().optional(),
+        Linktree: z.string().optional(),
     })
 })
 

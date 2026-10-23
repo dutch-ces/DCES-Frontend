@@ -5,15 +5,15 @@ import { lolChampionSchema, createFakeLolChampion, type lolChampion } from "../C
 import { seriesResultSchema } from "./Results"
 
 export const lolSeriesMatchResultSchema = z.object({
-    blue_team: TeamSchema.optional(),
-    red_team: TeamSchema.optional(),
-    blue_team_champs: z.array(lolChampionSchema).length(5).optional(),
-    red_team_champs: z.array(lolChampionSchema).length(5).optional(),
-    forfeit: z.boolean(),
+    BlueTeam: TeamSchema.optional(),
+    RedTeam: TeamSchema.optional(),
+    BlueTeamChamps: z.array(lolChampionSchema).length(5).optional(),
+    RedTeamChamps: z.array(lolChampionSchema).length(5).optional(),
+    Forfeit: z.boolean(),
 });
 
 export const lolSeriesResultSchema = seriesResultSchema.safeExtend({
-    matches: z.array(lolSeriesMatchResultSchema),
+    Matches: z.array(lolSeriesMatchResultSchema),
 });
 
 export type lolSeriesResult = z.infer<typeof lolSeriesResultSchema>
@@ -26,12 +26,12 @@ export function createFakeLolMatch(teams: [Team, Team] = [createFakeTeam(), crea
         blue_team_champs.push(createFakeLolChampion())
         red_team_champs.push(createFakeLolChampion())
     }
-    return{
-        blue_team: teams[0],
-        red_team: teams[1],
-        blue_team_champs: blue_team_champs,
-        red_team_champs: red_team_champs,
-        forfeit: faker.datatype.boolean(),
+    return {
+        BlueTeam: teams[0],
+        RedTeam: teams[1],
+        BlueTeamChamps: blue_team_champs,
+        RedTeamChamps: red_team_champs,
+        Forfeit: faker.datatype.boolean(),
     }
 }
 
@@ -39,15 +39,15 @@ export function createFakeLolSeries(overrides = {}): lolSeriesResult {
     const team1: Team = createFakeTeam()
     const team2: Team = createFakeTeam()
     return {
-        team1: team1,
-        team2: team2,
-        best_of: faker.number.int(),
-        time: faker.date.recent().toISOString(),
-        team1_score: faker.number.int(),
-        team2_score: faker.number.int(),
-        forfeit: faker.datatype.boolean(),
-        stage: faker.helpers.arrayElement(["Groupstage", "Playoffs"] as const),
-        round: faker.number.int(),
-        matches: [createFakeLolMatch([team1, team2]), createFakeLolMatch([team1, team2]), createFakeLolMatch([team1, team2])],
+        Team1: team1,
+        Team2: team2,
+        BestOf: faker.number.int(),
+        Time: faker.date.recent().toISOString(),
+        Team1Score: faker.number.int(),
+        Team2Score: faker.number.int(),
+        Forfeit: faker.datatype.boolean(),
+        Stage: faker.helpers.arrayElement(["Groupstage", "Playoffs"] as const),
+        Round: faker.number.int(),
+        Matches: [createFakeLolMatch([team1, team2]), createFakeLolMatch([team1, team2]), createFakeLolMatch([team1, team2])],
     }
 }

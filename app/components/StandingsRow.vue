@@ -8,26 +8,26 @@ const props = defineProps<{
 </script>
 
 <template>
-<div class="team">
-    <div class="team-column logo-column">
-        <!-- <img src="{{ url_for('static', filename= 'images/TeamLogos/LoL/' + standingsTeam.split + '/' + standingsTeam.team_name + '.png') }}" alt="{{ standingsTeam.team_name }} logo" class="team-logo"> -->
+    <div class="team">
+        <div class="team-column logo-column">
+            <!-- <img src="{{ url_for('static', filename= 'images/TeamLogos/LoL/' + standingsTeam.split + '/' + standingsTeam.team_name + '.png') }}" alt="{{ standingsTeam.team_name }} logo" class="team-logo"> -->
+        </div>
+        <div class="team-column name-column">
+            <NuxtLink :to="'/team/' + standingsTeam.TeamId">{{ standingsTeam.TeamName }}</NuxtLink>
+        </div>
+        <div class="team-column points-column">
+            <span class="points">{{ standingsTeam.Points }}</span>
+        </div>
+        <div class="team-column record-column">
+            <span class="wins">{{ standingsTeam.Wins }}</span>
+        </div>
+        <div class="team-column record-column text-neutral-800 dark:text-neutral-200">
+            <span class="ties">{{ standingsTeam.Ties }}</span>
+        </div>
+        <div class="team-column record-column">
+            <span class="losses">{{ standingsTeam.Losses }}</span>
+        </div>
     </div>
-    <div class="team-column name-column">
-        <NuxtLink :to="'/team/' + standingsTeam.team_id">{{ standingsTeam.team_name }}</NuxtLink>
-    </div>
-    <div class="team-column points-column">
-        <span class="points">{{ standingsTeam.points }}</span>
-    </div>
-    <div class="team-column record-column">
-        <span class="wins">{{ standingsTeam.wins }}</span>
-    </div>
-    <div class="team-column record-column text-neutral-800 dark:text-neutral-200">
-        <span class="ties">{{ standingsTeam.ties }}</span>
-    </div>
-    <div class="team-column record-column">
-        <span class="losses">{{ standingsTeam.losses }}</span>
-    </div>
-</div>
 
 </template>
 
@@ -44,7 +44,7 @@ const props = defineProps<{
     cursor: pointer;
 }
 
-.team > :where(div){
+.team> :where(div) {
     height: 100%;
 }
 
@@ -68,7 +68,8 @@ const props = defineProps<{
     justify-content: flex-start;
 }
 
-.points-column, .record-column {
+.points-column,
+.record-column {
     justify-content: center;
 }
 
@@ -101,8 +102,13 @@ const props = defineProps<{
     gap: 0.5rem;
 }
 
-.wins { color: var(--green); }
-.losses { color: var(--red); }
+.wins {
+    color: var(--green);
+}
+
+.losses {
+    color: var(--red);
+}
 
 @container div-standings-container (width < 600px) {
     .team {
@@ -110,11 +116,12 @@ const props = defineProps<{
         gap: 0.5rem;
         padding: 0;
     }
-    .logo-column{
+
+    .logo-column {
         height: 50px;
     }
 
-    .name-column{
+    .name-column {
         margin: 8px 0;
     }
 
